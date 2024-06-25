@@ -8,6 +8,8 @@ export function sortValue(inputValue: string): string {
         ? Object.keys(v)
             .sort()
             .reduce((r, k) => {
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
               r[k] = v[k];
               return r;
             }, {})
