@@ -49,7 +49,7 @@ export const useInputValue = () => {
       .subscribe((value) => {
         setRightInputValue(value);
         if (!validate(value)) {
-          leftError$.next(new Error("Jsonの形式が正しくありません"));
+          rightError$.next(new Error("Jsonの形式が正しくありません"));
         } else {
           rightError$.next(null);
         }
