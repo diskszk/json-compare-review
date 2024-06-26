@@ -1,4 +1,4 @@
-import { leftInputText$, rightInputText$ } from "./model";
+import { leftInputSubject$, rightInputSubject$ } from "./model";
 import { InputForm } from "./components/InputForm";
 import { DiffViewer } from "./components/DiffViewer";
 import { useInputValue } from "./hooks";
@@ -12,8 +12,8 @@ function App() {
     <>
       <div>
         <Flex direction="row">
-          <InputForm inputSubject$={leftInputText$} error={leftError} />
-          <InputForm inputSubject$={rightInputText$} error={rightError} />
+          <InputForm inputSubject$={leftInputSubject$} error={leftError} />
+          <InputForm inputSubject$={rightInputSubject$} error={rightError} />
         </Flex>
         <DiffViewer />
       </div>
