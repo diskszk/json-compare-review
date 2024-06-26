@@ -1,6 +1,6 @@
+import { Spinner, Box } from "@chakra-ui/react";
 import ReactDiffViewer from "react-diff-viewer";
 import { useInputValue } from "../hooks";
-import { Spinner, Box } from "@chakra-ui/react";
 
 export const DiffViewer: React.FC = () => {
   const { leftInputValue, rightInputValue, loading } = useInputValue();
