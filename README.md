@@ -13,7 +13,7 @@ Json Compare is an online diff tool that allows you to sort two Json texts by na
 ## Setup
 
 ```sh
-$ git clone 
+$ git clone https://github.com/diskszk/json-compare.git
 $ cd json-compare
 $ pnpm i
 $ pnpm run dev
