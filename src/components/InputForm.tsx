@@ -1,6 +1,7 @@
+import { Textarea, Text } from "@chakra-ui/react";
 import { BehaviorSubject } from "rxjs";
 import { loadingSubject$ } from "../model";
-import { Textarea, Text } from "@chakra-ui/react";
+
 export function InputForm({
   inputSubject$,
   error,

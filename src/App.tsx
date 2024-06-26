@@ -1,9 +1,9 @@
-import { leftInputSubject$, rightInputSubject$ } from "./model";
-import { InputForm } from "./components/InputForm";
-import { DiffViewer } from "./components/DiffViewer";
-import { useInputValue } from "./hooks";
-import "./App.css";
 import { Flex } from "@chakra-ui/react";
+import { DiffViewer } from "./components/DiffViewer";
+import { InputForm } from "./components/InputForm";
+import { useInputValue } from "./hooks";
+import { leftInputSubject$, rightInputSubject$ } from "./model";
+import "./App.css";
 
 function App() {
   const { leftError, rightError } = useInputValue();
