@@ -1,5 +1,6 @@
 import { BehaviorSubject } from "rxjs";
 import { loading$ } from "../model";
+import { Textarea, Text } from "@chakra-ui/react";
 
 export function InputForm({
   inputSubject$,
@@ -16,8 +17,17 @@ export function InputForm({
 
   return (
     <div>
-      <textarea onChange={handleChange}></textarea>
-      {error && <p>{error.message}</p>}
+      <Textarea
+        width="600px"
+        resize="none"
+        rows={10}
+        onChange={handleChange}
+      ></Textarea>
+      {error && (
+        <Text fontSize="sm" color="red.500">
+          {error.message}
+        </Text>
+      )}
     </div>
   );
 }
