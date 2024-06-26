@@ -5,20 +5,16 @@ import { useInputValue } from "./hooks";
 import { leftInputSubject$, rightInputSubject$ } from "./model";
 import "./App.css";
 
-function App() {
+export const App: React.FC = () => {
   const { leftError, rightError } = useInputValue();
 
   return (
-    <>
-      <div>
-        <Flex direction="row">
-          <InputForm inputSubject$={leftInputSubject$} error={leftError} />
-          <InputForm inputSubject$={rightInputSubject$} error={rightError} />
-        </Flex>
-        <DiffViewer />
-      </div>
-    </>
+    <div>
+      <Flex direction="row">
+        <InputForm inputSubject$={leftInputSubject$} error={leftError} />
+        <InputForm inputSubject$={rightInputSubject$} error={rightError} />
+      </Flex>
+      <DiffViewer />
+    </div>
   );
-}
-
-export default App;
+};

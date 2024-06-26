@@ -2,13 +2,10 @@ import { Textarea, Text } from "@chakra-ui/react";
 import { BehaviorSubject } from "rxjs";
 import { loadingSubject$ } from "../model";
 
-export function InputForm({
-  inputSubject$,
-  error,
-}: {
+export const InputForm: React.FC<{
   inputSubject$: BehaviorSubject<string>;
   error: Error | null;
-}) {
+}> = ({ inputSubject$, error }) => {
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     event.preventDefault();
     loadingSubject$.next(true);
@@ -30,4 +27,4 @@ export function InputForm({
       )}
     </div>
   );
-}
+};
