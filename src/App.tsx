@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 import { DiffViewer } from "./components/DiffViewer";
 import { InputForm } from "./components/InputForm";
 import { useInputValue } from "./hooks";
@@ -10,11 +10,18 @@ export const App: React.FC = () => {
 
   return (
     <div>
-      <Flex direction="row">
-        <InputForm inputSubject$={leftInputSubject$} error={leftError} />
-        <InputForm inputSubject$={rightInputSubject$} error={rightError} />
-      </Flex>
-      <DiffViewer />
+      <header>
+        <Heading as="h1" textAlign="center" margin="0 auto 16px 0">
+          Json Compare
+        </Heading>
+      </header>
+      <main>
+        <Flex direction="row">
+          <InputForm inputSubject$={leftInputSubject$} error={leftError} />
+          <InputForm inputSubject$={rightInputSubject$} error={rightError} />
+        </Flex>
+        <DiffViewer />
+      </main>
     </div>
   );
 };
