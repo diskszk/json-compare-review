@@ -20,14 +20,16 @@ export const DiffViewer: React.FC = () => {
           <Spinner size="xl" thickness="4px" color="blue.500" margin="0 auto" />
         </Box>
       )}
-      <ReactDiffViewer
-        oldValue={leftInputValue}
-        newValue={rightInputValue}
-        splitView={true}
-        showDiffOnly={false}
-        leftTitle={" "}
-        rightTitle={" "}
-      />
+      {leftInputValue && rightInputValue && (
+        <ReactDiffViewer
+          oldValue={leftInputValue}
+          newValue={rightInputValue}
+          splitView={true}
+          showDiffOnly={false}
+          leftTitle={" "}
+          rightTitle={" "}
+        />
+      )}
     </Box>
   );
 };
